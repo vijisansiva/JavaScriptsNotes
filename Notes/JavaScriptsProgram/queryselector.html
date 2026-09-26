@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title> queryselector</title>
+
+    </head>
+    <body>
+        <p class="m"> DOM = Document Object Model
+The DOM is a representation of an HTML webpage that the browser creates when it loads the page.
+JavaScript uses the DOM to find, change, add, and remove HTML elements.
+</p>
+<p class="m">When learning DOM, an important topic is how to select/find HTML elements.
+There are mainly these methods:
+</p>
+
+<button onclick="changetext()"> click</button>
+<script>
+    function changetext()
+    {
+        let f=document.querySelector(".m");
+        f.innerHTML="Document Object Model"
+
+    }
+</script>
+    </body>
+</html>

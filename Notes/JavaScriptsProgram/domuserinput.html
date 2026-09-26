@@ -1,0 +1,35 @@
+<html>
+    <head>
+<title>
+    Dom inputdata"
+</title>
+    </head>
+    <body>
+        <center>LoginForm</center>
+        UserName  : <input id="un" placeholder="Enter ur user name"></br>
+
+        Password  : <input id="ps" placeholder="enter password"></br>
+
+        <button  id="btn">Submit</button>
+        <h1 id ="result"></h1>
+        <script>
+
+let button=document.getElementById("btn");
+
+button.addEventListener("click",function(){
+   let s= document.getElementById("un").value;
+
+   document.getElementById("result").innerText="welcome " +s;
+
+
+let u=document.getElementById("un")
+u.remove();
+
+let p=document.getElementById("ps")
+p.remove();
+
+})
+
+        </script>
+    </body>
+</html>

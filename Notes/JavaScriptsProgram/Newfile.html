@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Elements of HTML</title>
+</head>
+
+<body>
+
+    <center>
+        <h1>Student Registration Form</h1>
+    </center>
+
+    <!-- TextBox -->
+    <label>Name:</label>
+    <input type="text" id="name">
+
+    <br><br>
+
+    <!-- Radio Button -->
+    <label>Gender:</label>
+
+    <input type="radio" name="gender" value="Male">
+    Male
+
+    <input type="radio" name="gender" value="Female">
+    Female
+
+    <br><br>
+
+    <!-- CheckBox -->
+    <label>Skills:</label>
+
+    <input type="checkbox" name="skill" value="Python">
+    Python
+
+    <input type="checkbox" name="skill" value="Java">
+    Java
+
+    <input type="checkbox" name="skill" value="JavaScript">
+    JavaScript
+
+    <input type="checkbox" name="skill" value="Playwright">
+    Playwright
+
+    <br><br>
+
+    <!-- Dropdown -->
+    <label>Course:</label>
+
+    <select id="course">
+
+        <option value="">Select the Course</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Playwright">Playwright</option>
+
+    </select>
+
+    <br><br>
+
+    <!-- Textarea -->
+    <label>Address:</label>
+
+    <br>
+
+    <textarea id="address" rows="3" cols="30"></textarea>
+
+    <br><br>
+
+    <!-- Button -->
+    <button onclick="displayData()">
+        Submit
+    </button>
+
+    <h1>Student Details</h1>
+
+    <p id="result"></p>
+
+
+    <script>
+
+        function displayData()
+        {
+
+            // 1. Get TextBox value
+
+            let name =
+                document.getElementById("name").value;
+
+
+            // 2. Get Radio Button value
+
+            let genderElement =
+                document.querySelector(
+                    'input[name="gender"]:checked'
+                );
+
+            let gender =
+                genderElement
+                ? genderElement.value
+                : "Not Selected";
+
+
+            // 3. Get CheckBox values
+
+            let checkboxElements =
+                document.querySelectorAll(
+                    'input[name="skill"]:checked'
+                );
+
+            let skills = [];
+
+            checkboxElements.forEach(function(skill)
+            {
+                skills.push(skill.value);
+            });
+
+
+            // 4. Get Textarea value
+
+            let address =
+                document.getElementById("address").value;
+
+
+            // 5. Get Dropdown value
+
+            let course =
+                document.getElementById("course").value;
+
+
+            // 6. Display all values
+
+            document.getElementById("result").innerHTML =
+
+                "Name: " + name + "<br>" +
+
+                "Gender: " + gender + "<br>" +
+
+                "Skills: " + skills.join(", ") + "<br>" +
+
+                "Course: " + course + "<br>" +
+
+                "Address: " + address;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> queryselector</title>
+
+    </head>
+    <body>
+        <p class="m"> Java Scripts class</p>
+        <p class="m">Playwright</p>
+
+<button onclick="changetext()"> click</button>
+<script>
+    function changetext()
+    {
+        let f=document.querySelectorAll(".m");
+        f.forEach(function(item){
+            item.style.color="blue";
+
+        });
+
+    }
+</script>
+    </body>
+</html>

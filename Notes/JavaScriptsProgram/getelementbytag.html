@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title> getelementbytagname</title>
+
+    </head>
+    <body>
+        <h1> JavaScript</h1>
+        <h1> HtMl</h1>
+        <h1>css</h1>
+        <button onclick="changeColor()"> Change color</button>
+        <script>
+            function changeColor(){
+                let h=document.getElementsByTagName("h1");
+                for (let i=0;i<=h.length;i++)
+            {
+                h[i].style.background="Blue"
+                h[i].style.color="white"
+
+            }
+            }
+        </script>
+    </body>
+</html>
