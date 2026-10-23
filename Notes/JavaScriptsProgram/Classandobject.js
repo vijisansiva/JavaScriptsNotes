@@ -1,22 +1,20 @@
-class addition
-{
-     add()
-    {
-        console.log("Addition")
-
-    }
-}
-class subtraction extends addition
-{
-    sub()
-    {
-        console.log("Subtraction")
-    }
+function checkLoan(creditScore) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (creditScore > 700) {
+                resolve("Loan Approved");
+            } else {
+                reject("Loan Rejected");
+            }
+        }, 2000);
+    });
 }
 
-const s =new subtraction()
-s.add()
-s.sub()
-
-
-
+async function loanStatus() {
+    try {
+        let result = await checkLoan(750);
+        console.log(result);
+    } catch (error) {
+        console.log(error);
+    }
+}
